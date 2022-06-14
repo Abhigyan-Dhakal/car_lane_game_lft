@@ -101,11 +101,11 @@ class Traffic {
     // Updating speed by fixed value on achieving high score
     this.updateSpeed = () => {
       if (score === 20) {
-        this.speed = this.speed + 2;
+        this.speed = 9;
         this.road.style.animation = "animatedRoad 0.95s linear infinite";
       }
       if (score === 40) {
-        this.speed = this.speed + 3;
+        this.speed = 12;
         this.road.style.animation = "animatedRoad 0.9s linear infinite";
       }
     };
