@@ -87,6 +87,7 @@ class Traffic {
       this.checkCollision();
       // If block to terminate the game on true collision condition
       if (collided) {
+        this.speed = 7;
         this.road.style.animation = "none";
         gameOver.style.display = "block";
         // Iterating through the children of this.road and removing it
@@ -100,11 +101,11 @@ class Traffic {
 
     // Updating speed by fixed value on achieving high score
     this.updateSpeed = () => {
-      if (score === 20) {
+      if (score === 18) {
         this.speed = 9;
         this.road.style.animation = "animatedRoad 0.95s linear infinite";
       }
-      if (score === 40) {
+      if (score === 36) {
         this.speed = 12;
         this.road.style.animation = "animatedRoad 0.9s linear infinite";
       }
