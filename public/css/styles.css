@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background-color: rgb(195, 239, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.road {
+  width: 340px;
+  height: 700px;
+  background-color: gray;
+  background-image: url("../images/road.png");
+  animation: animatedRoad 1s linear infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  color: white;
+}
+
+.starting-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  /* display: none; */
+}
+
+.controls-container {
+  margin: 10px 0px;
+  background-color: rgb(37, 37, 37, 0.5);
+  padding: 20px;
+}
+
+.start-btn {
+  display: inline-block;
+  background-color: rgb(37, 37, 37);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.start-btn:hover {
+  background-color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.game-over-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  display: none;
+  background-color: rgb(37, 37, 37, 0.5);
+  padding: 20px;
+}
+
+.goto-menu-btn {
+  display: inline-block;
+  background-color: rgb(37, 37, 37);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.goto-menu-btn:hover {
+  background-color: black;
+  transition: 0.2s ease-in-out;
+}
+
+@keyframes animatedRoad {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 600px;
+  }
+}
